@@ -1,0 +1,21 @@
+<div class="shop-steps">
+    <div class="shop-steps__item">
+        <span class="shop-steps__count">1</span>
+        <span class="shop-steps__label">Account</span>                        
+    </div> 
+    <div class="shop-steps__item">
+        <span class="shop-steps__count">2</span>
+        <span class="shop-steps__label">Shipping</span>
+    </div>            
+    <div class="shop-steps__item">
+        <span class="shop-steps__count shop-steps__count_active">3</span>
+        <span class="shop-steps__label">Billing</span>
+    </div>            
+    <div class="shop-steps__item">
+        <span class="shop-steps__count shop-steps__count_inactive">4</span>
+        <span class="shop-steps__label">Review</span>
+    </div>              
+    <div class="shop-steps__progress">
+        <div class="shop-steps__progress-active"></div>
+    </div>      
+</div>

@@ -1,0 +1,38 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 1;
+
+    @media (max-width: 1024px) {        
+        flex-direction: column;        
+    }
+
+    &_desktop {
+        @media (max-width: 1024px) {            
+            display: none;
+        }
+    }
+
+    &_mobile {
+        @media (min-width: 1025px) {        
+            display: none;        
+        }
+    }
+
+    &__item {
+        @media (max-width: 1024px) {
+            text-align: center;
+        }
+        
+        &:not(:last-child) {
+            margin-right: 30px;
+
+            @media (max-width: 1024px) {
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+        }
+    }
+}

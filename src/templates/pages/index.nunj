@@ -1,0 +1,98 @@
+{% extends "../ext/base.nunj" %}
+
+{% from "../../components/menu/menu.nunj" import menu %}
+{% from "../../components/button/button.nunj" import button %}
+{% from "../../components/checkbox/checkbox.nunj" import checkbox %}
+{% from "../../components/radio/radio.nunj" import radio %}
+
+{# Пример расширения существующего блока #}
+{# Например можно использовать для добавления уникальных тайтлов для каждой страницы #}
+{# {% block title %}Home / {{ super() }}{% endblock title %} #}
+
+{% block content %}
+
+	{% include '../../components/header/header.nunj' %}
+
+	<section class="main">
+        <section class="content">
+            {% include '../../components/shop_steps/shop_steps.nunj' %}
+
+            <div class="billing">
+                <h1 class="billing__heading">Billing Information</h1>
+                <form action="#" class="form">                
+                    <div class="form__row form__row_paymethod">
+                        {{ radio({
+                            name: 'pay_method',
+                            id: 'credit_card',
+                            checked: true,
+                            label: 'Pay with Credit Card'
+                        }) }}
+
+                        {{ radio({
+                            name: 'pay_method',
+                            id: 'paypal',
+                            checked: false,
+                            label: '<img src="assets/images/paypal.svg" alt="">'
+                        }) }}
+                    </div>
+
+                    <div class="form__creditcard" v-if="paymethod == 'credit_card'">
+                        <div class="form__row">
+                            <label for="name_of_card" class="form__label">Name on card</label>
+                            <input type="text" placeholder="Placeholder Text" name="name_of_card" id="name_of_card" class="form__input">
+                        </div>
+
+                        <label for="card_number_1" class="form__label">Card number</label>
+                        <div class="form__row form__row_cart-num">
+                            <input type="number" name="card_number_1" id="card_num_1" class="form__input form__input_num">
+                            <input type="number" name="card_number_2" id="card_num_2" class="form__input form__input_num">
+                            <input type="number" name="card_number_3" id="card_num_3" class="form__input form__input_num">
+                            <input type="number" name="card_number_4" id="card_num_4" class="form__input form__input_num">
+                        </div>
+                        
+                        <div class="form__num-exp">    
+                            <div class="form__group">
+                                <label for="expire_date" class="form__label">Expire date</label>
+                                <input type="number" name="expire_date" id="expire_date" class="form__input form__input_num">
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="cvv_code" class="form__label">CVV code <span class="form__question">?</span></label>
+                                <input type="number" name="cvv_code" id="cvv_code" class="form__input form__input_num">
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="form__rules">   
+                        {{ checkbox({
+                            name: 'save_infornation',
+                            id: 'save_infornation',
+                            checked: true,
+                            label: 'Save information of this credit card'
+                        }) }}
+
+                        {{ checkbox({
+                            name: 'privacy_policies',
+                            id: 'privacy_policies',
+                            checked: false,
+                            label: 'I accept the <a href="#">terms and comditions</a> and the <a href="#">Privacy Policies</a>'
+                        }) }}
+                    </div>
+
+                    <div class="form__buttons">                        
+                            {{ button({
+                                className: 'button_light',
+                                text: 'Back'				            
+                            }) }}
+
+                            {{ button({
+                                type: 'submit',				           
+                                text: 'Check Out'				            
+                            }) }}                        
+                    </div>
+                </form> 
+            </div>
+        </section>
+        
+        {% include '../../components/sidebar/sidebar.nunj' %}
+    </section>
+{% endblock content %}

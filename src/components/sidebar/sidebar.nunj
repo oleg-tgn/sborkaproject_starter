@@ -1,0 +1,21 @@
+{% from "../../components/menu/menu.nunj" import menu %}
+
+<section class="sidebar">
+    <div class="sidebar__section_mobile">
+        {{ menu({ className: 'menu_desktop'	}) }}
+    </div>
+    <div class="sidebar__section">
+        <h2 class="sidebar__title">My basket</h2>
+        
+        {% include '../../components/basket_list/basket_list.nunj' %}
+    </div>  
+    <div class="sidebar__section">                
+        <h2 class="sidebar__heading">Promo code</h2>
+        {% include '../../components/promocode/promocode.nunj' %}
+    </div>
+    <div class="sidebar__section">        
+        <div class="sidebar__total-price">
+            {% include '../../components/total_price/total_price.nunj' %}
+        </div>
+    </div>
+</section>

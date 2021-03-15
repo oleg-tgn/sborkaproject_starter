@@ -1,0 +1,48 @@
+{
+	"menuItems": [
+		{
+			"name": "Women’s",
+			"path": "#"
+		},
+		{
+			"name": "Men’s",
+			"path": "#"
+		},
+		{
+			"name": "Home",
+			"path": "#"
+		},
+		{
+			"name": "Travel",
+			"path": "#"
+		},
+		{
+			"name": "Beauty",
+			"path": "#"
+		},
+		{
+			"name": "Sale",
+			"path": "#"
+		}
+	],
+	"basketList": [
+		{
+            "img": "assets/images/jacket.png",
+            "name": "Amet minim mollit non deserunt ullamco est sit",
+            "count": 1,
+            "price": 525             
+        },
+        {
+            "img": "assets/images/sneakers.png",
+            "name": "Amet minim mollit non",
+            "count": 1,
+            "price": 525
+        }
+	],
+	"basketTotal": {
+		"tax": "100",
+      	"shipping": "150",      	
+      	"subTotal": "1 050",
+      	"total": "1 300"
+	}
+}

@@ -1,0 +1,21 @@
+.button {
+    padding: 13px 30px;
+    border-radius: 3px;
+    background: #3366ff;
+    border: 1px solid #3366ff; 
+    font-size: 14px;    
+    line-height: 1;
+    color: #ffffff;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+
+	&_light {    
+		background: #ffffff;
+		border: 1px solid #cfcfcf; 
+		color: #000000;
+	}
+	
+}

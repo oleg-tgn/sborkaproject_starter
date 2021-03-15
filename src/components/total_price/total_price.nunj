@@ -1,0 +1,18 @@
+<div class="total-price">               
+    <div class="total-price__row">
+        <span class="total-price__key">Subtotal</span>
+        <span class="total-price__value">${{ basketTotal.subTotal }}</span>
+    </div>
+    <div class="total-price__row">
+        <span class="total-price__key">Tax</span>
+        <span class="total-price__value">${{ basketTotal.tax }}</span>
+    </div>
+    <div class="total-price__row">
+        <span class="total-price__key">Shipping</span>
+        <span class="total-price__value">${{ basketTotal.shipping }}</span>
+    </div>    
+    <div class="total-price__row total-price__row_main">
+        <span class="total-price__key">Total</span>
+        <span class="total-price__value">${{ basketTotal.total }}</span>
+    </div>
+</div>  

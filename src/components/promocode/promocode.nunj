@@ -1,0 +1,8 @@
+<div class="promocode">
+    <form action="#" class="form">
+        <input type="text" class="form__input form__input_promocode" placeholder="Placeholder Text" v-model="promocode">
+        <button type="button" class="button" @click="applyPromocode()">
+            Apply
+        </button>                        
+    </form>
+</div>

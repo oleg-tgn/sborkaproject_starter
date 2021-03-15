@@ -1,0 +1,69 @@
+.basket-list {
+    margin-top: 30px;
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__img {
+        width: 100px;
+        margin-right: 10px;
+    }
+
+    &__data {
+        width: calc(100% - 145px);
+        margin-right: 25px;
+    }
+
+    &__price-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;    
+        margin-top: 15px;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+    }
+
+    &__price {
+        @media (max-width: 767px) {
+            margin-top: 15px;
+        }
+    }
+
+    &__count {
+        display: inline-block;
+        width: 50px;
+        text-align: center;
+        border: none;
+    }
+
+    &__count-wrap {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__minus,
+    &__plus {
+        display: inline;
+        background: none;
+        border: none;  
+        cursor: pointer;      
+
+        &:focus {
+            outline: none;            
+        }
+    }
+
+    &__delete {
+        width: 20px;
+    }
+}

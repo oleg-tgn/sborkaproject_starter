@@ -1,0 +1,44 @@
+/* sidebar */
+.sidebar {
+    width: 410px;
+    max-width: 100%;    
+    border-left: 1px solid #cfcfcf;    
+
+    @media (max-width: 1024px) {     
+        display: none;  
+        
+        &.visible {
+            display: block;
+            position: absolute;
+            right: 0;
+            z-index: 10;
+            background: #fff;       
+        }
+    }
+
+    &_mobile {
+        @media (min-width: 1025px) {    
+            display: none;
+        }
+    }
+
+    &__section {
+        display: block;    
+        padding: 40px;
+        border-bottom: 1px solid #cfcfcf;
+
+        &:last-child {
+            border-bottom: none;
+        }        
+    }
+
+    &__heading {
+        font-size: 18px;
+        line-height: 1;
+        margin-bottom: 30px;
+    }
+
+    &__basket {
+        margin-top: 30px;
+    }
+}

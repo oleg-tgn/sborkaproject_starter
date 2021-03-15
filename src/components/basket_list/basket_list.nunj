@@ -1,0 +1,31 @@
+<ul class="basket-list">
+    {% for item in basketList %}
+        <li class="basket-list__item">
+            <div class="basket-list__img">                    
+                <img src="{{ item.img }}" alt="{{ item.name }}">
+            </div>
+            <div class="basket-list__data">
+                <span class="basket-list__name">{{ item.name }}</span>
+
+                <div class="basket-list__price-row">
+                    <div class="basket-list__count-wrap">
+                        <button class="basket-list__minus">
+                            <img src="assets/images/minus_btn.svg" alt="minus">
+                        </button>
+                        <input type="number" class="basket-list__count" value="1" v-model="item.count" v-on:change="checkCount(index)">
+                        <button class="basket-list__plus">
+                            <img src="assets/images/plus_btn.svg" alt="plus">
+                        </button>
+                    </div>
+                    <span class="basket-list__price">$ {{ item.price * item.count }}</span>
+                </div>                        
+            </div>
+            
+            <div class="basket-list__delete">
+                <a href="#" class="basket-list__delete-btn">
+                    <img src="assets/images/del_btn.svg" alt="del">
+                </a>
+            </div>
+        </li>
+    {% endfor %}                
+</ul>
